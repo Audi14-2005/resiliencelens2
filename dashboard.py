@@ -1,8 +1,9 @@
+import os
 import streamlit as st
 import pandas as pd
 import requests
 
-API_URL = "http://localhost:8000"
+API_URL = os.environ.get("TICKET_API_URL", "http://localhost:8000")
 
 st.set_page_config(
     page_title="ResilienceLens Scrum Board",
